@@ -18,6 +18,12 @@ class SongPlaylist extends Component {
     this.setState({tracksList: initialTracksList})
   }
 
+  removeTrack = trackId => {
+    this.setState(prev => ({
+      tracksList: prev.tracksList.filter(track => track.id !== trackId),
+    }))
+  }
+
   updateInputSearch = event => {
     this.setState({inputSearch: event.target.value})
   }
@@ -39,7 +45,11 @@ class SongPlaylist extends Component {
     return (
       <ul className="tracks-list-container">
         {filteredTracksList.map(each => (
-          <SongCard trackDetails={each} key={each.id} />
+          <SongCard
+            trackDetails={each}
+            removeTrack={this.removeTrack}
+            key={each.id}
+          />
         ))}
       </ul>
     )
@@ -57,7 +67,7 @@ class SongPlaylist extends Component {
               className="search-field"
               onChange={this.updateInputSearch}
             />
-            <FiSearch size={20} />
+            <FiSearch size={20} className="search-icon" />
           </div>
         </div>
         {this.renderSongs()}

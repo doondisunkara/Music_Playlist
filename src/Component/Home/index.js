@@ -2,11 +2,8 @@ import './index.css'
 
 const Home = () => (
   <div className="home-container">
-    <img
-      className="home-img"
-      src="https://assets.ccbp.in/frontend/react-js/music-playlist/music-playlist-Edsheeran-bg.png"
-      alt="edsheeran"
-    />
+    <h1 className="name">Ed Sheeran</h1>
+    <p className="designation">Singer</p>
   </div>
 )
 

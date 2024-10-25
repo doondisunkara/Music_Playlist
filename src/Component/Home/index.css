@@ -1,7 +1,27 @@
 .home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/music-playlist/music-playlist-Edsheeran-bg.png');
+  background-size: cover;
+  padding-left: 80px;
+  padding-bottom: 30px;
+  height: 400px;
   width: 100%;
 }
 
-.home-img {
-  width: 100%;
+.name {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0px;
+}
+
+.designation {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: 500;
+  margin: 20px 0px 0px 0px;
 }
